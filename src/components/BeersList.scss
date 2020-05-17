@@ -2,14 +2,12 @@
   display: flex;
   flex-direction: column;
   font-family: "Pangolin", cursive;
-  background: url("/mousse.jpg");
-  background-repeat: repeat;
+  background: rgba(247, 211, 12, 0.5);
   width: 100vw;
   margin: 0;
 }
 
 .all h2 {
-  padding: 2vh 0;
   margin: auto;
   margin-bottom: 0;
   font-size: 35px;
@@ -19,7 +17,7 @@
   justify-content: center;
   height: 8vh;
   width: 80%;
-  text-shadow: rgba(247, 211, 12, 0.5) 2px 5px;
+  text-shadow: rgba(247, 242, 214, 0.986) 2px 5px;
 }
 .all a {
   width: 15vw;
@@ -30,7 +28,7 @@
   width: 15vw;
   margin: auto;
   padding: 0.8vh 2vw;
-  background-color: rgba(247, 211, 12, 0.5);
+  background: url("/mousseMob.jpg");
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   border-radius: 2em;
   font-size: 20px;
@@ -43,13 +41,30 @@
 }
 
 .all button:hover {
-  background-color: rgba(247, 211, 12, 0.8);
+  opacity: 0.7;
   cursor: pointer;
+}
+
+.all h4,
+.all h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.all h5 {
+  text-align: center;
+  font-size: 20px;
 }
 
 .card {
   display: flex;
   justify-content: space-around;
+  border: 6px groove #000000;
+  box-shadow: 5px 15px 5px #000000;
+  border-radius: 22px;
+  margin: auto;
+  margin: 1vh 2vw;
+  background: url("/mousse.jpg");
 }
 
 .card img {
@@ -69,6 +84,15 @@
   width: 70%;
 }
 
+.inline {
+  display: flex;
+  justify-content: space-around;
+}
+
+em {
+  text-decoration: underline;
+}
+
 @media all and (max-width: 700px) {
   .all h2 {
     font-size: 20px;
@@ -84,7 +108,21 @@
     margin: auto;
   }
 
+  .card {
+    background: url("/mousseMob.jpg");
+  }
+
   .card img {
     width: 40%;
+  }
+
+  .all h4,
+  .all h3 {
+    font-size: 20px;
+  }
+
+  .all h5 {
+    font-size: 15px;
+    margin: 0;
   }
 }

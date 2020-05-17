@@ -27,18 +27,40 @@ export default function BeersList() {
             <div className="text">
               <div className="general">
                 <h3>{beer.name}</h3>
-                <h4>{beer.description}</h4>
-                <p>abv: {beer.abv}</p>
-                <p>ibu: {beer.ibu}</p>
+                <p>{beer.description}</p>
+                <div className="inline">
+                  <p>
+                    <em>abv: </em>
+                    {beer.abv}
+                  </p>
+                  <p>
+                    <em>ibu: </em>
+                    {beer.ibu}
+                  </p>
+                </div>
               </div>
               <div className="details">
                 <h4>Manufacturing Parameters</h4>
                 <h5>Ingredients</h5>
                 <p>
-                  Malts:{" "}
+                  <em>Malts: </em>
                   {beer.ingredients.malt.map((malt, i) => (
                     <span key={i}>{malt.name}</span>
                   ))}
+                </p>
+                <p>
+                  <em>Hops: </em>
+                  {beer.ingredients.hops.map((hops, i) => (
+                    <span key={i}>{hops.name}</span>
+                  ))}
+                </p>
+                <p>
+                  <em>Yeast: </em>
+                  {beer.ingredients.yeast}
+                </p>
+                <p>
+                  <em>Brewers tips: </em>
+                  {beer.brewers_tips}
                 </p>
               </div>
             </div>
