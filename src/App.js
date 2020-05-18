@@ -1,9 +1,10 @@
 import React from "react";
-import "./App.scss";
-import Abvs from "./components/Abvs";
-import Homepage from "./components/Homepage";
-import BeersList from "./components/BeersList";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Abvs from "./components/Abvs";
+import Beer from "./components/Beer";
+import BeersList from "./components/BeersList";
+import Homepage from "./components/Homepage";
+import "./App.scss";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/beerslist" component={BeersList} />
-          <Route path="/abvs" component={Abvs} />
+          <Route path={`/beerslist/beer`} component={Beer} />
+          <Route path={`/beerslist/abvs`} component={Abvs} />
         </Switch>
       </div>
     </Router>
